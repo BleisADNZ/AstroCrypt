@@ -42,6 +42,9 @@ contract Astrocrypt is ERC20Burnable {
         _name = "Astrocrypt"; _symbol = "ASCR"; _decimals = 18;
         _mint(msg.sender, 100000000000000000000000000);
     }
+    function name() public override view returns (string memory) {return _name;}
+    function symbol() public override view returns (string memory) {return _symbol;}
+    function decimals() public override view returns (uint8) {return _decimals;}
 }
 /**
  * By: Bleiserman (AZ)
